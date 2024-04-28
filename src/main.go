@@ -15,6 +15,8 @@ func main() {
 	//var sites []string = readfilehelper.ReadLineOfFile("urllist")
 	sites, _ := readfilehelper.ReadLineOfFile("urllist")
 	go registerdurhelper.Register(sites)
-	http.ListenAndServe(":8081", nil)
-	log.Fatalln(http.ListenAndServe(":8081", nil))
+	//http.ListenAndServe(":8081", nil)
+	//log.Fatalln(http.ListenAndServe(":8081", nil))
+	log.Fatal(http.ListenAndServe(":8081", nil))
+	//handler := http.HandlerFunc(pla)
 }
