@@ -7,6 +7,7 @@ import (
 	"os"
 )
 
+// ReadLineOfFile used in main function
 func ReadLineOfFile(urlfilesites string) ([]string, string) {
 	var fileLines []string
 	file, err := os.Open(urlfilesites)
