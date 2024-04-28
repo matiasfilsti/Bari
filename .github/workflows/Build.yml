@@ -34,7 +34,7 @@ jobs:
       uses: golangci/golangci-lint-action@v5
       with:
         version: v1.57
-      args: --timeout=30m --issues-exit-code=1
+        args: --timeout=30m --issues-exit-code=1
     #- name: Install golint
     #  run: go install golang.org/x/lint/golint@latest
 
