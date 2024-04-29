@@ -16,6 +16,10 @@ jobs:
       uses: docker/metadata-action@v4
       with:
         images: filstimatias/bari
+    - name: Set up QEMU
+      uses: docker/setup-qemu-action@v3
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v3
     - name: build and push to docker
       if: github.event_name != 'pull_request'
       uses: docker/build-push-action@v5
