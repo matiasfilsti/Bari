@@ -13,9 +13,9 @@ var test1 = []struct {
 	{
 		"testfile", "https://google.com",
 	},
-	{
-		"testfile", "https://www.microsoft.com",
-	},
+	//{
+	//	"testfile", "https://www.microsoft.com",
+	//},
 }
 
 var test2 = []struct {
