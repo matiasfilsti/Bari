@@ -16,8 +16,6 @@ jobs:
       uses: docker/metadata-action@v4
       with:
         images: filstimatias/bari
-        tags: | 
-          type=semver,pattern={{version}}
     - name: build and push to docker
       if: github.event_name != 'pull_request'
       uses: docker/build-push-action@v5
