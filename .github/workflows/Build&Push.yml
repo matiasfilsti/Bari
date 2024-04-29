@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-      with: 
+      #with: 
         #GH_TOKEN: ${{ secrets.PAT_TOKEN_WORKFLOW }}
     - name: build and push to docker
       uses: docker/build-push-action@v5
