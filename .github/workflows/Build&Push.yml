@@ -11,7 +11,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-   
+    - name: Get Meta
+      id: meta
+      with:
+        images: filstimatias/bari
+        tags: | 
+          type=semver,pattern={{version}}
     - name: build and push to docker
       if: github.event_name != 'pull_request'
       uses: docker/build-push-action@v5
@@ -22,4 +27,4 @@ jobs:
         username: ${{ secrets.DOCKER_HUB_USERNAME }}
         password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
         repository: filstimatias/bari
-        tags: ${{ env.RELEASE_VERSION }}
+        tags: ${{ steps.meta.outputs.tags }}
